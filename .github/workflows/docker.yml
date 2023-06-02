@@ -3,7 +3,7 @@ name: build waf dockers
 on:
   pull_request_target:
     types:
-      - closed  
+      - closed
   
 jobs:
   docker:
