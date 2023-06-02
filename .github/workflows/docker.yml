@@ -1,11 +1,15 @@
 name: build waf dockers
-
-permissions:
-  contents: write
   
 on:
-  push:
-    branches: [ "*" ]
+  workflow_call:
+    secrets:
+      DOCKERHUB_USERNAME:
+        description: 'A token passed from the caller workflow'
+        required: false
+      DOCKERHUB_TOKEN:
+        description: 'A token passed from the caller workflow'
+        required: false
+
   
 jobs:
   docker:
