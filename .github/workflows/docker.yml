@@ -27,4 +27,4 @@ jobs:
           context: TADK
           platforms: linux/amd64
           push: true
-          tags: kingfs/TADK:v23.03.0
+          tags: kingfs/tadk:v23.03.0
