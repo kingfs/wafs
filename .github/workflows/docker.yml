@@ -1,18 +1,13 @@
 name: build waf dockers
   
 on:
-  workflow_call:
-    secrets:
-      DOCKERHUB_USERNAME:
-        description: 'A token passed from the caller workflow'
-        required: false
-      DOCKERHUB_TOKEN:
-        description: 'A token passed from the caller workflow'
-        required: false
-
+  pull_request_target:
+    types:
+      - closed  
   
 jobs:
   docker:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
