@@ -1,9 +1,12 @@
 name: build waf dockers
 
+permissions:
+  contents: write
+  
 on:
+  pull_request:
   push:
-    branches:
-      - "main"
+  
 
 jobs:
   docker:
