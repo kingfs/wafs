@@ -4,9 +4,11 @@ permissions:
   contents: write
   
 on:
-  pull_request:
-  push:
-  
+  pull_request_target:
+    types:
+    - opened
+    branches:
+    - 'main'
 
 jobs:
   docker:
